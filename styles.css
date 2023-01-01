@@ -1,9 +1,13 @@
 body {
-    font-family: Arial,
-        Helvetica,
-        sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Luxurious Roman', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
+:root {
+    --theme-color: #7477BF;
+}
 
 .grid-container {
     display: grid;
@@ -14,36 +18,39 @@ body {
         "header"
         "navigation"
         "main";
-
-}
-
-.bell,
-hr,
-.profile-picture img,
-.student-name {
-    margin-right: 10px;
-}
-
-.notifications {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    padding: 5px 10px;
-    border-radius: 50%;
-    background: red;
-    color: white;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    background-color: #7477BF;
+    background-color: var(--theme-color);
     color: white;
     grid-area: "header";
+    gap: 10px;
+    height: 50px;
+    padding: 0 10px;
 }
 
 h1 {
     flex-grow: 1;
+    font-weight: 400;
+    font-size: medium;
+}
+
+.bell {
+    position: relative;
+    size: 10px;
+}
+
+.notifications {
+    position: absolute;
+    top: 8px;
+    right: -3px;
+    border-radius: 50%;
+    background: rgb(128, 226, 128);
+    color: white;
+    height: 5px;
+    width: 5px;
 }
 
 .profile-picture {
@@ -55,26 +62,20 @@ h1 {
 
 .profile-picture img {
     border-radius: 50%;
-    width: 50px;
+    width: 30px;
     display: block;
 }
 
-h3 {
-    padding: 0;
-    margin: 0;
-}
 
 .student-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    font-weight: 300;
+    font-size: 10px;
+    margin: 0px;
 }
-
-.main {
-    display: grid;
-}
-
 
 .sidebar {
     display: flex;
@@ -83,11 +84,109 @@ h3 {
     background-color: #4D4C72;
     gap: 50px;
     justify-content: center;
-    padding: 15px;
-
+    height: 50px;
+    padding: 0 25px;
 }
 
-.home {}
+svg {
+    fill: white;
+}
+
+main {
+    grid-area: "main";
+}
+
+main>section {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    padding-top: 0;
+}
+
+.main-header {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.headline {
+    font-weight: 400;
+    font-size: medium;
+    padding-left: 10px;
+}
+
+.tab {
+    border: 1px solid rgb(235, 229, 229);
+    flex-grow: 1;
+    background-color: #F7F7F7;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.traffic-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.type-of-device {
+    list-style-type: none;
+}
+
+.social-stats {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+.social-stats>li {
+    list-style-type: none;
+    display: grid;
+    border: 1px solid #CCCCCC;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+}
+
+.social-icon {
+    background-color: var(--theme-color);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    justify-self: center;
+}
+
+.social-icon>svg {
+    left: 15px;
+    top: 15px;
+    position: absolute;
+}
+
+h4 {
+    color: var(--theme-color);
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.social-text {
+    margin: 0;
+}
+
+.social-text>p {
+    font-size: 26px;
+    margin-top: 0;
+    color: #777777;
+}
 
 @media (min-width: 768px) {
     .grid-container {
@@ -99,6 +198,7 @@ h3 {
     .header {
 
         display: grid;
+
     }
 
     .main {
