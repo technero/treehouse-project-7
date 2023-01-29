@@ -11,13 +11,8 @@ alertBanner.getElementsByClassName("alert-banner-close")[0].addEventListener('cl
     alertBanner.style.display = "none"
 })
 
-let traffiCanvas = document.getElementById("traffic-chart");
 
-
-
-
-
-
+const trafficCanvas = document.getElementById("trafficChart").getContext("2d");
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -29,3 +24,29 @@ let trafficData = {
         borderWidth: 1,
     }]
 };
+
+let trafficOptions = {
+    backgroundColor: 'rgb(112, 104, 201)',
+    fill: true,
+    aspectRatio: 2.5,
+    Animation: {
+        duration: 0
+    },
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    },
+    plugins: {
+        legend: {
+            display: false
+        }
+    }
+};
+
+let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
+});
+
