@@ -239,37 +239,65 @@
       </form>
     </section>
 
-    <section>
+    <section class="settings">
       <h3>settings</h3>
       <div class="settings-container">
-        <div class="settings">
+        <div class="switch-setting">
           <p>send email notifications</p>
-          <!--set css toggle code-->
-          <div class="container">
-            <p>on
-              <input class="slider-round" type="checkbox">
-            </p>
-          </div>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round">ON</span>
+          </label>
         </div>
-        <div class="settings">
+        <div class="switch-setting">
           <p>set profile to public</p>
-          <div class="container">
-            <p>on
-              <input class="slider-round" type="checkbox">
-            </p>
-          </div>
-        </div>
-        <!--set css toggle code-->
-        <select class="form-field" id="timezone">
-          <option disabled selected>select timezone</option>
-          <option>Eastern</option>
-          <!--more options-->
-        </select>
-        <div class="setting-button">
-          <button class="button-primary" id="save">save</button>
-          <button class="button-disabled" id="cancel">cancel</button>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round">ON</span>
+          </label>
         </div>
       </div>
+
+
+      <!-- <div class="settings-container">
+        <div class="settings">
+          <p>send email notifications</p>
+          
+          <div class="switch">
+            <p>on
+              <input class="slider" type="checkbox">
+              <span class="slider-round"></span>
+
+            </p>
+          </div>
+        </div>
+
+        <div class="settings">
+          <p>set profile to public</p>
+          <div class="switch">
+            <p>on
+              <input class="slider" type="checkbox">
+              <span class="slider-round"></span>
+            </p>
+          </div>
+        </div>
+-->
+      <!--set css toggle code-->
+      <select class="form-field" id="timezone">
+        <option disabled selected>select timezone</option>
+        <option>Eastern</option>
+        <!--more options-->
+      </select>
+
+      <div class="setting-button">
+        <button class="button-primary" id="save">save</button>
+        <button class="button-disabled" id="cancel">cancel</button>
+      </div>
+
+      </div>
+
     </section>
   </main>
   <script src="myscript.js"></script>

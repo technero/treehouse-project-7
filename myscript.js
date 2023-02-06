@@ -96,11 +96,13 @@ const mobileData = {
     }]
 };
 
+
 const mobileOptions = {
-    aspectRatio: 1.9,
+    aspectRatio: 2,
     plugins: {
         legend: {
-            position: 'right',
+            display: true,
+            Position: 'right',
             labels: {
                 boxWidth: 20,
                 fontStyle: 'bold'
