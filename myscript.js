@@ -117,3 +117,9 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
 });
+
+//messageing section//
+
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
