@@ -195,3 +195,27 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+const saveBtn = document.getElementById("save");
+const cancelBtn = document.getElementById("cancel");
+const sendEmail = document.getElementById("emailNotification");
+const sendEmailSlider = document.querySelector("#emailNotification+.slider");
+const publicProfile = document.getElementById("setPublicProfile");
+const timeZone = document.getElementById("timezone");
+sendEmail.checked = false;
+publicProfile.checked = false;
+
+saveBtn.addEventListener("click", () => {
+    localStorage.setItem("sendEmail", JSON.stringify(sendEmail.checked));
+    localStorage.setItem("publicProfile", JSON.stringify(publicProfile.checked));
+    localStorage.setItem("timeZone", timeZone.value ?? "");
+});
+
+sendEmail.checked = JSON.parse(localStorage.getItem("sendEmail"));
+publicProfile.checked = JSON.parse(localStorage.getItem("publicProfile"));
+timeZone.value = localStorage.getItem("timeZone");
+
+cancelBtn.addEventListener("click", function () {
+    sendEmail.checked = false;
+    publicProfile.checked = false;
+    timeZone.value = "";
+});

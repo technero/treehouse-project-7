@@ -251,7 +251,7 @@
           <p>send email notifications</p>
           <!-- Rounded switch -->
           <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" id="emailNotification">
             <span class="slider round">ON</span>
           </label>
         </div>
@@ -259,7 +259,7 @@
           <p>set profile to public</p>
           <!-- Rounded switch -->
           <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" id="setPublicProfile">
             <span class="slider round">ON</span>
           </label>
         </div>
@@ -267,8 +267,10 @@
 
       <!--set css toggle code-->
       <select class="form-field" id="timezone">
-        <option disabled selected>select timezone</option>
-        <option>Eastern</option>
+        <option disabled selected value="">select timezone</option>
+        <option value="est">Eastern</option>
+        <option value="ct">Central</option>
+        <option value="pst">Pacific</option>
         <!--more options-->
       </select>
 
