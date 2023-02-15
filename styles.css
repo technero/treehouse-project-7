@@ -303,6 +303,11 @@ h4 {
     flex-grow: 1;
 }
 
+.member-contact a {
+    text-decoration: none;
+    color: var()--theme-color #7477BF;
+}
+
 .recent-activity {
     display: flex;
     flex-direction: column;
@@ -543,9 +548,6 @@ input:checked+.slider:before {
         padding: 10px;
     }
 
-    .member-contact a {
-        text-decoration: none;
-    }
 
     .members-comment {
         flex-direction: row;
