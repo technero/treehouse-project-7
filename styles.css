@@ -134,8 +134,14 @@ h1 {
     height: 50px;
 }
 
-.sidebar>svg {
+.sidebar>a {
     width: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar svg {
+    margin: 0 auto;
 }
 
 svg {
@@ -501,10 +507,10 @@ input:checked+.slider:before {
         height: 100%;
     }
 
-    .sidebar>svg {
-        height: 30px;
-        width: auto;
-        padding-top: 20px;
+    .sidebar>a {
+        height: 20px;
+        width: 40px;
+        padding: 10px;
     }
 
 
