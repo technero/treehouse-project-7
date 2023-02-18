@@ -218,4 +218,8 @@ cancelBtn.addEventListener("click", function () {
     sendEmail.checked = false;
     publicProfile.checked = false;
     timeZone.value = "";
+    localStorage.removeItem("sendEmail");
+    localStorage.removeItem("publicProfile");
+    localStorage.removeItem("timeZone");
+
 });
